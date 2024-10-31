@@ -1,0 +1,25 @@
+// switch•¶‚Æbreak•¶‚Ì—‰ğ‚ğ[‚ß‚é‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n;
+
+	cout << "®”‚ğ“ü—Í‚¹‚æF";
+	cin >> n;
+
+	switch (n) {
+	 case 0 : cout << "A";
+              cout << "B";		break;
+	 case 1:  cout << "O";      break;
+	 case 2 : cout << "C";
+	 case 5 : cout << "D";		break;
+	 case 6 :
+	 case 7 : cout << "E";		break;
+	 default: cout << "D";		break;
+	}
+	cout << "\n";
+}
