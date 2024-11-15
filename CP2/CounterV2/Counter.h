@@ -21,14 +21,18 @@ public:
 
 	//--- 前置増分演算子++ ---//
 	Counter& operator++() {
-		if (cnt < UINT_MAX) cnt++;		// カウンタの上限はUINT_MAX
+		if (cnt < UINT_MAX)  cnt++;
+		if (cnt < UINT_MAX)   cnt++;          // カウンタの上限はUINT_MAX
 		return *this;					// 自分自身への参照を返却
 	}
 
 	//--- 後置増分演算子++ ---//
 	Counter operator++(int) {
 		Counter x = *this;				// インクリメント前の値を保存
-		if (cnt < UINT_MAX) cnt++;		// カウンタの上限はUINT_MAX
+		if (cnt < UINT_MAX) cnt++;	
+		if (cnt < UINT_MAX) cnt++;
+				     // カウンタの上限はUINT_MAX
+
 		return x;						// 保存していた値を返却
 	}
 

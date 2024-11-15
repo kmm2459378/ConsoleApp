@@ -6,6 +6,9 @@
 //
 #include "BlockShape.h"
 #include "FallBlock.h"
+#ifndef __FIELD_WIDTH_H
+#define __FIELD_HEIGHT_H
+
 
 const int FIELD_WIDTH = 12;
 const int FIELD_HEIGHT = 18;
@@ -49,3 +52,4 @@ void SetFallBlock(Stage* stage, FallBlock* fallBlock);
 bool IsGameOver(Stage* stage);
 
 // ★ここにインクルードガード(終了)を記入してください
+#endif

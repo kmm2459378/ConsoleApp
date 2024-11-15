@@ -19,10 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CounterV1\Counter.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="CounterV1\CounterTest.cpp" />
+    <ClCompile Include="chap03\list0312.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

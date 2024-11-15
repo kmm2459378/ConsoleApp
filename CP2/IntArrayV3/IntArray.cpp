@@ -8,7 +8,7 @@ IntArray::IntArray(const IntArray& x)
 	nelem = x.nelem;					// 要素数をxと同じにする
 	vec = new int[nelem];				// 配列本体を確保
 	for (int i = 0; i < nelem; i++)		// 全要素をコピー
-		vec[i] = x.vec[i];
+		vec[i] = x.vec[i] * 3;
 }
 
 //--- 代入演算子 ---//
@@ -21,7 +21,7 @@ IntArray& IntArray::operator=(const IntArray& x)
 			vec = new int[nelem];		// 新たに領域を確保
 		}
 		for (int i = 0; i < nelem; i++)	// 全要素をコピー
-			vec[i] = x.vec[i];
+			vec[i] = x.vec[i] * 2;
 	}
 	return *this;
 }

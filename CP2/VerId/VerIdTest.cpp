@@ -10,6 +10,7 @@ int main()
 	VerId a;		// 識別番号1番
 	VerId b;		// 識別番号2番
 
+	VerId::counter = -1;
 	cout << "aの識別番号：" << a.id() << '\n';
 	cout << "bの識別番号：" << b.id() << '\n';
 	cout << "生成されたオブジェクトの数：" << VerId::counter << '\n';

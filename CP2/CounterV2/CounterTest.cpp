@@ -19,6 +19,7 @@ int main()
 	cout << "カウントダウン回数：";  cin >> no;
 
 	for (int i = 0; i < no; i++)	// カウントダウン（xは後置でyは前置）
+		if(x > 0 || y >0)
 		cout << x-- << ' ' << --y << '\n';
 
 	if (!x)

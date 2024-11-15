@@ -8,7 +8,7 @@
 using namespace std;
 
 // 平年の各月の日数
-int Date::dmax[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+int Date::dmax[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 //--- y年m月の日数を求める ---//
 int Date::day_of_month(int y, int m)
@@ -20,11 +20,16 @@ int Date::day_of_month(int y, int m)
 Date::Date()
 {
 	time_t current = time(NULL);				// 現在の暦時刻を取得
-	struct tm* local = localtime(&current);		// 要素別の時刻に変換
+	//struct tm* local = localtime(&current);		// 要素別の時刻に変換
+	struct tm local;		// 要素別の時刻に変換
+	localtime_s(&local, &current);
 
-	y = local->tm_year + 1900;		// 年：tm_yearは西暦年-1900
-	m = local->tm_mon + 1;			// 月：tm_monは0～11
-	d = local->tm_mday;
+	//y = local->tm_year + 1900;		// 年：tm_yearは西暦年-1900
+	//m = local->tm_mon + 1;			// 月：tm_monは0～11
+	//d = local->tm_mday;
+	y = local.tm_year + 1900;		// 年：tm_yearは西暦年-1900
+	m = local.tm_mon + 1;			// 月：tm_monは0～11
+	d = local.tm_mday;
 }
 
 //--- Dateのコンストラクタ（指定された年月日に設定）---//

@@ -11,6 +11,8 @@ class OverFlow { };
 //--- xの２倍を返す ---//
 int f(int x)
 {
+	if (cin.fail())
+	throw "おかしい。数字以外が入力されています。\n";
 	if (x < 0)
 		throw "おかしい。値が負になっています。\n";
 	else if (x > 30000)

@@ -20,7 +20,7 @@ int main()
 	cout << "元旦から" << today.day_of_year() << "日経過しています。\n";
 
 	cout << "今年は閏年"
-		 << (today.leap_year() ? "です。" : "ではありません。") << '\n';
+		 << (Date::leap_year(today.year()) ? "です。" : "ではありません。") << '\n';
 
 	int y, m, d;
 

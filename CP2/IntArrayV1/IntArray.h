@@ -4,19 +4,19 @@
 #define ___Class_IntArray
 
 //===== 整数配列クラス ======//
-class IntArray {
-	int nelem;		// 配列の要素数
-	int* vec;		// 先頭要素へのポインタ
+class DoubleArray {
+	int nelem ;		// 配列の要素数
+	double* vec;		// 先頭要素へのポインタ
 
 public:
 	//--- コンストラクタ ---//
-	IntArray(int size) : nelem(size) { vec = new int[nelem]; }
+	DoubleArray(int size) : nelem(size) { vec = new double[nelem]; }
 
 	//--- 要素数を返す ---//
 	int size() const { return nelem; }
 
 	//--- 添字演算子[] ---//
-	int& operator[](int i) { return vec[i]; }
+	double& operator[](int i) { return vec[i]; }
 };
 
 #endif
